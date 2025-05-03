@@ -1,0 +1,184 @@
+.details-section {
+    display: flex;
+    align-items: center;
+    padding: 60px 80px;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background decoration */
+.bg-decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.bg-circle-1 {
+    width: 600px;
+    height: 600px;
+    background-color: #f7f7f2;
+    left: -200px;
+    top: -100px;
+}
+
+.bg-circle-2 {
+    width: 400px;
+    height: 400px;
+    background-color: #f5f5f0;
+    left: -50px;
+    top: 200px;
+}
+
+.bg-circle-3 {
+    width: 350px;
+    height: 350px;
+    background-color: #f0f0e8;
+    right: -100px;
+    top: -150px;
+}
+
+.bg-circle-4 {
+    width: 450px;
+    height: 450px;
+    background-color: #f7f7f2;
+    right: -150px;
+    bottom: -100px;
+}
+
+/* Plate image container */
+.plate-container {
+    flex: 1;
+    position: relative;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plate-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    animation: rotatePlate 30s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotatePlate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Content container */
+.content-container {
+    flex: 1;
+    padding: 20px 40px;
+    max-width: 600px;
+}
+
+.started-text {
+    color: #00a36c;
+    font-family: "Leckerli One", cursive;
+    font-style: italic;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.main-heading {
+    font-size: 44px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Features list */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.feature-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: #ffede8;
+    padding: 6px;
+}
+
+.choose-icon {
+    background-color: #fff0e8;
+}
+
+.cook-icon {
+    background-color: #fff0ee;
+}
+
+.heat-icon {
+    background-color: #fff6e8;
+}
+
+.repeat-icon {
+    background-color: #f0f8ff;
+}
+
+.feature-icon img {
+    height: 18px;
+    width: 18px;
+}
+
+.feature-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .details-section {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    
+    .content-container {
+        padding: 20px 0;
+        max-width: 100%;
+    }
+    
+    .main-heading {
+        font-size: 36px;
+    }
+}
