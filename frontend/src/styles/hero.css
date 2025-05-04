@@ -2,7 +2,8 @@
     position: relative;
     padding: 120px 10% 100px;
     text-align: center;
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
+    background-color: #f4f1f0;
     overflow: hidden;
     min-height: 100vh;
     display: flex;
@@ -96,7 +97,6 @@
     display: block;
 }
 
-/* Top left image */
 .hero-image-1 {
     width: 500px;
     height: 500px;
@@ -105,7 +105,6 @@
     animation: rotateInTopLeft 1.5s ease-out forwards;
 }
 
-/* Bottom left image */
 .hero-image-2 {
     width: 400px;
     height: 400px;
@@ -114,7 +113,6 @@
     animation: rotateInBottomLeft 1.8s ease-out forwards;
 }
 
-/* Right image */
 .hero-image-3 {
     width: 650px;
     height: 650px;
@@ -123,7 +121,6 @@
     animation: rotateInRight 1.6s ease-out forwards;
 }
 
-/* Animation Keyframes */
 @keyframes rotateInTopLeft {
     from {
         transform: rotate(45deg) translateY(-400px);
@@ -157,7 +154,6 @@
     }
 }
 
-/* Ensure proper spacing for the hero section considering fixed navbar */
 @media (max-width: 1200px) {
     .hero-image-1 {
         width: 400px;
@@ -189,4 +185,4 @@
         width: 350px;
         height: 350px;
     }
-}
+} 
