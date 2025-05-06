@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { assets } from '../../assets/assets';
 
 const Footer = () => {
@@ -25,12 +26,14 @@ const Footer = () => {
 
       <div className="footer-bar">
         <div className="footer-left">
-          <span className="footer-brand">Fresh<span id='footer-brand-span'>Khana</span></span>
+          <Link to="/">
+            <span className="footer-brand">Fresh<span id='footer-brand-span'>Khana</span></span>
+          </Link>
           <span className="footer-text-subtle"> 2025 All Rights Reserved.</span>
           <span className="footer-text-subtle">Made by Gagan1642</span>
         </div>
         <div className="footer-right">
-          <a href="#" className="footer-link">Home</a>
+          <Link to="/" className="footer-link">Home</Link>
           <a href="#" className="footer-link">About</a>
           <a href="#" className="footer-link">Contact Us</a>
           <div className="footer-social-icons">

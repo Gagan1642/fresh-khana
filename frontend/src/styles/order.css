@@ -1,0 +1,171 @@
+/* Order Page Styles */
+.order-page-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.order-header {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.order-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.order-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.delivery-info-form {
+    flex: 1 1 60%;
+    max-width: 650px;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #00BCD4;
+    outline: none;
+}
+
+.view-cart-link {
+    margin-top: 1.5rem;
+}
+
+.view-cart-link a {
+    color: #00BCD4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.view-cart-link a:hover {
+    color: #008ba3;
+    text-decoration: underline;
+}
+
+.order-summary {
+    flex: 1 1 30%;
+    max-width: 350px;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    align-self: flex-start;
+}
+
+.order-summary h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-row.total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: none;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid #ddd;
+}
+
+.payment-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.payment-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Empty Order Page */
+.empty-order-container {
+    max-width: 600px;
+    margin: 5rem auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.empty-order-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.empty-order-container p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.menu-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #00BCD4;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.menu-btn:hover {
+    background-color: #008ba3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .order-content {
+        flex-direction: column;
+    }
+    
+    .delivery-info-form,
+    .order-summary {
+        max-width: 100%;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

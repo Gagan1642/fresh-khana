@@ -18,7 +18,7 @@ const Drinks = ({ onAddToCart }) => {
                         <p className="food-description">Creamy, frothy goodness with a perfect blend of coffee and ice - a refreshing pick-me-up that'll keep you chilled!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Cold Coffee", "₹99")}
+                            onClick={() => onAddToCart("Cold Coffee", "₹99", drinks.cold_coffee)}
                         >
                             ADD TO CART
                         </button>
@@ -36,7 +36,7 @@ const Drinks = ({ onAddToCart }) => {
                         <p className="food-description">Royal treat with layers of rose syrup, vermicelli, basil seeds, and creamy rabri - a dessert drink fit for Maharajas!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Falooda", "₹149")}
+                            onClick={() => onAddToCart("Falooda", "₹149", drinks.falooda)}
                         >
                             ADD TO CART
                         </button>
@@ -54,7 +54,7 @@ const Drinks = ({ onAddToCart }) => {
                         <p className="food-description">Thick, creamy yogurt churned to perfection with a hint of cardamom - Punjab's gift to beat the summer heat!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Lassi", "₹89")}
+                            onClick={() => onAddToCart("Lassi", "₹89", drinks.lassi)}
                         >
                             ADD TO CART
                         </button>
@@ -72,7 +72,7 @@ const Drinks = ({ onAddToCart }) => {
                         <p className="food-description">Rich milk infused with saffron strands and crushed almonds - a royal indulgence that's both tasty and healthy!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Kesar Badam Milk", "₹79")}
+                            onClick={() => onAddToCart("Kesar Badam Milk", "₹79", drinks.milk)}
                         >
                             ADD TO CART
                         </button>
@@ -90,7 +90,7 @@ const Drinks = ({ onAddToCart }) => {
                         <p className="food-description">Alphonso magic in a glass! Creamy, pulpy and oh-so-delicious - the king of fruits transformed into summer's perfect companion!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Mango Shake", "₹99")}
+                            onClick={() => onAddToCart("Mango Shake", "₹99", drinks.mango_shake)}
                         >
                             ADD TO CART
                         </button>
@@ -108,7 +108,7 @@ const Drinks = ({ onAddToCart }) => {
                         <p className="food-description">Velvety smooth chocolate delight with a desi twist of cinnamon and cardamom - pure comfort in every sip!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Hot Chocolate", "₹129")}
+                            onClick={() => onAddToCart("Hot Chocolate", "₹129", drinks.hot_chocolate)}
                         >
                             ADD TO CART
                         </button>
@@ -126,7 +126,7 @@ const Drinks = ({ onAddToCart }) => {
                         <p className="food-description">Tangy lime cooler with a secret masala mix - the perfect desi lemonade to quench your thirst and rejuvenate your soul!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Shikanji", "₹69")}
+                            onClick={() => onAddToCart("Shikanji", "₹69", drinks.shikanji)}
                         >
                             ADD TO CART
                         </button>
@@ -144,7 +144,7 @@ const Drinks = ({ onAddToCart }) => {
                         <p className="food-description">Traditional Kashmiri refresher with rose essence and basil seeds - a cooling concoction straight from the valleys of paradise!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Ruh Avzah", "₹75")}
+                            onClick={() => onAddToCart("Ruh Avzah", "₹75", drinks.ruh_avzah)}
                         >
                             ADD TO CART
                         </button>

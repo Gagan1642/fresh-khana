@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 import '../../styles/navbar.css';
 
 const Navbar = ({ setShowLogin, setIsLogin }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isPagesOpen, setIsPagesOpen] = useState(false);
+    const { getCartItemCount } = useCart();
+
+    // Get cart count using the function from context
+    const cartCount = getCartItemCount();
 
     return (
         <header className="header-container">
             <nav className="navbar">
                 <div className="logo">
-                    <div className="logo-text">Fresh<span>Khana</span></div>
+                    <Link to="/">
+                        <div className="logo-text">Fresh<span>Khana</span></div>
+                    </Link>
                 </div>
 
                 <div className="nav-links">
-                    <a href="#">HOME</a>
+                    <Link to="/">
+                        <a href="#">HOME</a>
+                    </Link>
 
                     <div
                         className="nav-link-item dropdown"
@@ -51,13 +61,15 @@ const Navbar = ({ setShowLogin, setIsLogin }) => {
                 </div>
 
                 <div className="right-menu">
-                    <button className="cart-button">
-                        CART <span className="cart-count">0</span>
-                    </button>
+                    <Link to="/cart">
+                        <button className="cart-button">
+                            CART <span className="cart-count">{cartCount}</span>
+                        </button>
+                    </Link>
                     <button
                         onClick={() => {
-                            setIsLogin(true);    
-                            setShowLogin(true);  
+                            setIsLogin(true);
+                            setShowLogin(true);
                         }}
                         className="cta-button"
                     >

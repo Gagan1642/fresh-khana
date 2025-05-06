@@ -18,7 +18,7 @@ const Fast_Food = ({ onAddToCart }) => {
                         <p className="food-description">Crunchy aloo tikki with desi spices, fresh veggies and our secret chutney - pure joy in every bite!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Aloo Tikki Burger", "₹99")}
+                            onClick={() => onAddToCart("Classic Burger", "₹129", fast_food.burger)}
                         >
                             ADD TO CART
                         </button>
@@ -36,7 +36,7 @@ const Fast_Food = ({ onAddToCart }) => {
                         <p className="food-description">Loaded with colorful veggies, desi masala and oodles of cheese - a slice of happiness!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Veggie Pizza", "₹149")}
+                            onClick={() => onAddToCart("Veggie Pizza", "₹149", fast_food.pizza)}
                         >
                             ADD TO CART
                         </button>
@@ -54,7 +54,7 @@ const Fast_Food = ({ onAddToCart }) => {
                         <p className="food-description">Crispy grilled bread packed with veggies and our special masala - the perfect snack anytime!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Grilled Sandwich", "₹89")}
+                            onClick={() => onAddToCart("Grilled Sandwich", "₹89", fast_food.sandwich)}
                         >
                             ADD TO CART
                         </button>
@@ -72,7 +72,7 @@ const Fast_Food = ({ onAddToCart }) => {
                         <p className="food-description">Golden-fried rolls with spicy veggie filling - crunchy outside, chatpata inside!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Spring Roll", "₹79")}
+                            onClick={() => onAddToCart("Grilled Sandwich", "₹89", fast_food.spring_rolls)}
                         >
                             ADD TO CART
                         </button>
@@ -90,7 +90,7 @@ const Fast_Food = ({ onAddToCart }) => {
                         <p className="food-description">Juicy paneer wrapped in soft roti with a kick of spices - the ultimate street food delight!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Paneer Roll", "₹99")}
+                            onClick={() => onAddToCart("Paneer Roll", "₹99", fast_food.paneer_rolls)}
                         >
                             ADD TO CART
                         </button>
@@ -108,7 +108,7 @@ const Fast_Food = ({ onAddToCart }) => {
                         <p className="food-description">Smoky tandoori paneer with a secret marinade - so tasty you'll order seconds!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Paneer Tikka", "₹129")}
+                            onClick={() => onAddToCart("Paneer Tikka", "₹129", fast_food.paneer_tikka)}
                         >
                             ADD TO CART
                         </button>
@@ -126,7 +126,7 @@ const Fast_Food = ({ onAddToCart }) => {
                         <p className="food-description">Desi-style pasta with a masaledaar twist - Italy meets India in every forkful!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Masala Pasta", "₹109")}
+                            onClick={() => onAddToCart("Masala Pasta", "₹109", fast_food.pasta)}
                         >
                             ADD TO CART
                         </button>
@@ -144,7 +144,7 @@ const Fast_Food = ({ onAddToCart }) => {
                         <p className="food-description">Crispy outside, soft inside - our mum's special recipe with a punch of Indian masala!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Veg Cutlets", "₹69")}
+                            onClick={() => onAddToCart("Veg Cutlets", "₹69", fast_food.cutlets)}
                         >
                             ADD TO CART
                         </button>

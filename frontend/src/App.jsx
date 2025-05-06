@@ -6,13 +6,15 @@ import Cart from "./pages/Cart";
 import Order from "./pages/Order";
 import Login from "./components/login-popup/Login";
 import SignUp from "./components/login-popup/SignUp";
+import CartProvider from "./context/CartContext"; // Import CartProvider
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <>
+    // Wrap everything in CartProvider to make cart context available throughout the app
+    <CartProvider>
       {showLogin && (
         isLogin ? (
           <Login setShowLogin={setShowLogin} setIsLogin={setIsLogin} />
@@ -29,7 +31,7 @@ const App = () => {
           <Route path="/order" element={<Order />} />
         </Routes>
       </div>
-    </>
+    </CartProvider>
   );
 };
 

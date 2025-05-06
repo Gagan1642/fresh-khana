@@ -9,26 +9,24 @@ import { fast_food } from "../../assets/assets";
 import { snacks } from "../../assets/assets";
 import { drinks } from "../../assets/assets";
 import { cakes } from "../../assets/assets";
+import { useCart } from "../../context/CartContext"; // Import useCart hook
 
-
-const Menu = ({ onAddToCart }) => {
+const Menu = () => {
     // Use React state to track the active category
     const [activeCategory, setActiveCategory] = useState("fast-food");
+    
+    // Get addToCart function from context
+    const { addToCart } = useCart();
 
     // Function to handle category click
     const handleCategoryClick = (categoryId) => {
         setActiveCategory(categoryId);
     };
 
-    // Function to handle add to cart
-    const handleAddToCart = (foodName, foodPrice) => {
-        // Call the passed down onAddToCart prop if it exists
-        if (onAddToCart) {
-            onAddToCart(foodName, foodPrice);
-        } else {
-            // Fallback if prop is not passed
-            alert(`Added to cart: ${foodName} (${foodPrice})`);
-        }
+    // Function to handle add to cart with correct parameter format
+    const handleAddToCart = (foodName, foodPrice, foodImage) => {
+        // Use the addToCart function from context
+        addToCart(foodName, foodPrice, foodImage);
     };
 
     return (
@@ -127,7 +125,7 @@ const Menu = ({ onAddToCart }) => {
                             <p className="food-description">Crispy samosas smothered in spicy chhole with tangy chutney - a desi fusion that makes your heart sing with joy!</p>
                             <button 
                                 className="add-to-cart"
-                                onClick={() => handleAddToCart("Chole Samosa", "₹99")}
+                                onClick={() => handleAddToCart("Chole Samosa", "₹99", snacks.chole_samosa)}
                             >
                                 Add to cart
                             </button>
@@ -145,7 +143,7 @@ const Menu = ({ onAddToCart }) => {
                             <p className="food-description">Loaded with colorful veggies, desi masala and oodles of cheese - a slice of happiness!</p>
                             <button
                                 className="add-to-cart"
-                                onClick={() => handleAddToCart("Veggie Pizza", "₹149")}
+                                onClick={() => handleAddToCart("Veggie Pizza", "₹149", fast_food.pizza)}
                             >
                                 Add to cart
                             </button>
@@ -163,9 +161,9 @@ const Menu = ({ onAddToCart }) => {
                             <p className="food-description">Crispy grilled bread packed with veggies and our special masala - the perfect snack anytime!</p>
                             <button
                                 className="add-to-cart"
-                                onClick={() => handleAddToCart("Grilled Sandwich", "₹89")}
+                                onClick={() => handleAddToCart("Grilled Sandwich", "₹89", fast_food.sandwich)}
                             >
-                                ADD TO CART
+                                Add to cart
                             </button>
                         </div>
                     </div>
@@ -181,9 +179,9 @@ const Menu = ({ onAddToCart }) => {
                             <p className="food-description">Vibrant red layers with creamy cheese frosting – the perfect blend of elegance and indulgence for special occasions!</p>
                             <button
                                 className="add-to-cart"
-                                onClick={() => handleAddToCart("Red Velvet Cake", "₹420")}
+                                onClick={() => handleAddToCart("Red Velvet Cake", "₹420", cakes.red_velvet_cake)}
                             >
-                                ADD TO CART
+                                Add to cart
                             </button>
                         </div>
                     </div>
@@ -199,9 +197,9 @@ const Menu = ({ onAddToCart }) => {
                             <p className="food-description">Creamy, frothy goodness with a perfect blend of coffee and ice - a refreshing pick-me-up that'll keep you chilled!</p>
                             <button
                                 className="add-to-cart"
-                                onClick={() => handleAddToCart("Cold Coffee", "₹99")}
+                                onClick={() => handleAddToCart("Cold Coffee", "₹99", drinks.cold_coffee)}
                             >
-                                ADD TO CART
+                                Add to cart
                             </button>
                         </div>
                     </div>

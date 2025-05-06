@@ -18,7 +18,7 @@ const Cakes = ({ onAddToCart }) => {
                         <p className="food-description">Rich, moist layers with velvety chocolate frosting – an irresistible treat for every chocolate lover's dream come true!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Chocolate Cake", "₹350")}
+                            onClick={() => onAddToCart("Chocolate Cake", "₹350", cakes.chocolate_cake)}
                         >
                             ADD TO CART
                         </button>
@@ -36,7 +36,7 @@ const Cakes = ({ onAddToCart }) => {
                         <p className="food-description">Soft sponge loaded with fresh seasonal fruits and light cream – a colorful symphony of flavors in every bite!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Fruit Cake", "₹380")}
+                            onClick={() => onAddToCart("Fruit Cake", "₹380", cakes.fruit_cake)}
                         >
                             ADD TO CART
                         </button>
@@ -54,7 +54,7 @@ const Cakes = ({ onAddToCart }) => {
                         <p className="food-description">Vibrant red layers with creamy cheese frosting – the perfect blend of elegance and indulgence for special occasions!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Red Velvet Cake", "₹420")}
+                            onClick={() => onAddToCart("Red Velvet Cake", "₹420", cakes.red_velvet_cake)}
                         >
                             ADD TO CART
                         </button>
@@ -72,7 +72,7 @@ const Cakes = ({ onAddToCart }) => {
                         <p className="food-description">Creamy, smooth texture with buttery biscuit base – a heavenly dessert that melts in your mouth with every spoonful!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Cheese Cake", "₹450")}
+                            onClick={() => onAddToCart("Cheese Cake", "₹450", cakes.cheese_cake)}
                         >
                             ADD TO CART
                         </button>
@@ -90,7 +90,7 @@ const Cakes = ({ onAddToCart }) => {
                         <p className="food-description">Adorable mini cakes topped with swirls of flavored frosting – perfectly portioned sweetness for any time indulgence!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Cupcakes", "₹120")}
+                            onClick={() => onAddToCart("Cupcakes", "₹120", cakes.cupcake)}
                         >
                             ADD TO CART
                         </button>
@@ -108,7 +108,7 @@ const Cakes = ({ onAddToCart }) => {
                         <p className="food-description">Warm, fluffy cake served in a mug with molten chocolate center – the ultimate quick fix for dessert cravings!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Mug Cake", "₹150")}
+                            onClick={() => onAddToCart("Mug Cake", "₹150", cakes.mug_cake)}
                         >
                             ADD TO CART
                         </button>
@@ -126,7 +126,7 @@ const Cakes = ({ onAddToCart }) => {
                         <p className="food-description">Buttery crust filled with seasonal fruits and smooth custard – a perfect balance of tangy and sweet flavors!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Tart", "₹180")}
+                            onClick={() => onAddToCart("Tart", "₹180", cakes.tart)}
                         >
                             ADD TO CART
                         </button>
@@ -144,7 +144,7 @@ const Cakes = ({ onAddToCart }) => {
                         <p className="food-description">Fudgy chocolate squares with crunchy walnuts – decadently rich treats that satisfy your deepest chocolate cravings!</p>
                         <button 
                             className="add-to-cart"
-                            onClick={() => onAddToCart("Brownies", "₹160")}
+                            onClick={() => onAddToCart("Brownies", "₹160", cakes.brownie)}
                         >
                             ADD TO CART
                         </button>

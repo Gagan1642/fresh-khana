@@ -9,6 +9,7 @@ import './styles/steps.css'
 import './styles/menu.css'
 import './styles/footer.css'
 import './styles/login.css'
+import './styles/cart.css'
 import App from './App.jsx'
 
 ReactDOM.createRoot(document.getElementById("root")).render(
