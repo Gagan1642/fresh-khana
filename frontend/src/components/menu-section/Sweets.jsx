@@ -15,7 +15,9 @@ const Sweets = ({ onAddToCart }) => {
                         <div className="food-price">
                             <span className="current-price">₹85</span>
                         </div>
-                        <p className="food-description">Soft, golden brown dumplings soaked in rose-scented sugar syrup – a melt-in-your-mouth treat for sweet lovers!</p>
+                        <p className="food-description">
+                            Soft, golden brown dumplings soaked in rose-scented sugar syrup - a melt-in-your-mouth treat for sweet lovers!
+                        </p>
                         <button
                             className="add-to-cart"
                             onClick={() => onAddToCart("Gulab Jamun", "₹85", sweets.gulab_jamun)}
@@ -33,7 +35,9 @@ const Sweets = ({ onAddToCart }) => {
                         <div className="food-price">
                             <span className="current-price">₹130</span>
                         </div>
-                        <p className="food-description">Disc-shaped sweet with honeycomb texture, drizzled with saffron syrup and pistachios – a royal Rajasthani delicacy!</p>
+                        <p className="food-description">
+                            Disc-shaped sweet with honeycomb texture, drizzled with saffron syrup and pistachios - a royal Rajasthani delicacy!
+                        </p>
                         <button
                             className="add-to-cart"
                             onClick={() => onAddToCart("Ghevar", "₹130", sweets.ghevar)}
@@ -51,7 +55,9 @@ const Sweets = ({ onAddToCart }) => {
                         <div className="food-price">
                             <span className="current-price">₹95</span>
                         </div>
-                        <p className="food-description">Delicate cottage cheese dumplings in creamy cardamom milk, garnished with saffron – the perfect royal indulgence!</p>
+                        <p className="food-description">
+                            Delicate cottage cheese dumplings in creamy cardamom milk, garnished with saffron - the perfect royal indulgence!
+                        </p>
                         <button
                             className="add-to-cart"
                             onClick={() => onAddToCart("Rasmalai", "₹95", sweets.rasmalai)}
@@ -69,7 +75,9 @@ const Sweets = ({ onAddToCart }) => {
                         <div className="food-price">
                             <span className="current-price">₹110</span>
                         </div>
-                        <p className="food-description">Crispy, juicy jalebis served with velvety rabri – a divine combination that makes your taste buds dance!</p>
+                        <p className="food-description">
+                            Crispy, juicy jalebis served with velvety rabri - a divine combination that makes your taste buds dance!
+                        </p>
                         <button
                             className="add-to-cart"
                             onClick={() => onAddToCart("Jalebi Rabri", "₹110", sweets.jalebi_rabri)}
@@ -87,7 +95,9 @@ const Sweets = ({ onAddToCart }) => {
                         <div className="food-price">
                             <span className="current-price">₹75</span>
                         </div>
-                        <p className="food-description">Rich, creamy traditional Indian ice cream with flavors of cardamom and pistachios – the perfect desi treat to beat the heat!</p>
+                        <p className="food-description">
+                            Rich, creamy traditional Indian ice cream with flavors of cardamom and pistachios - the perfect desi treat to beat the heat!
+                        </p>
                         <button
                             className="add-to-cart"
                             onClick={() => onAddToCart("Kulfi", "₹75", sweets.kulfi)}
@@ -105,7 +115,9 @@ const Sweets = ({ onAddToCart }) => {
                         <div className="food-price">
                             <span className="current-price">₹90</span>
                         </div>
-                        <p className="food-description">Tiny gram flour pearls bound with cardamom sugar syrup – these orange delights are festive and absolutely irresistible!</p>
+                        <p className="food-description">
+                            Tiny gram flour pearls bound with cardamom sugar syrup - these orange delights are festive and absolutely irresistible!
+                        </p>
                         <button
                             className="add-to-cart"
                             onClick={() => onAddToCart("Motichoor Ladoo", "₹90", sweets.motichoor_ladoo)}
@@ -123,7 +135,9 @@ const Sweets = ({ onAddToCart }) => {
                         <div className="food-price">
                             <span className="current-price">₹100</span>
                         </div>
-                        <p className="food-description">Grainy milk squares with cardamom aroma and pistachios – a royal North Indian treat that melts in your mouth!</p>
+                        <p className="food-description">
+                            Grainy milk squares with cardamom aroma and pistachios - a royal North Indian treat that melts in your mouth!
+                        </p>
                         <button
                             className="add-to-cart"
                             onClick={() => onAddToCart("Kalakand", "₹100", sweets.kalakand)}
@@ -141,7 +155,9 @@ const Sweets = ({ onAddToCart }) => {
                         <div className="food-price">
                             <span className="current-price">₹80</span>
                         </div>
-                        <p className="food-description">Soft, cylindrical Bengali delicacy soaked in sweet syrup with khoya – a colorful treat that brings Kolkata's flavors to your plate!</p>
+                        <p className="food-description">
+                            Soft, cylindrical Bengali delicacy soaked in sweet syrup with khoya - a colorful treat that brings Kolkata's flavors to your plate!
+                        </p>
                         <button
                             className="add-to-cart"
                             onClick={() => onAddToCart("Chum Chum", "₹80", sweets.chum_chum)}

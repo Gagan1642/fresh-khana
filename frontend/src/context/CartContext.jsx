@@ -6,6 +6,10 @@ export const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
 
 const CartProvider = ({ children }) => {
+
+  const url = "http://localhost:4000";
+  const [token, setToken] = useState("");
+
   // Initialize cart from localStorage if available, otherwise empty array
   const [cartItems, setCartItems] = useState(() => {
     const savedCart = localStorage.getItem('cart');
@@ -17,16 +21,24 @@ const CartProvider = ({ children }) => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
   }, [cartItems]);
 
+  useEffect(() => {
+    const storedToken = localStorage.getItem('token');
+
+    if (storedToken) {
+      setToken(storedToken);
+    }
+  }, []);
+
   // Add item to cart with image
   const addToCart = (foodName, foodPrice, foodImage) => {
     // Check if item already exists in cart
     const existingItemIndex = cartItems.findIndex(item => item.name === foodName);
-    
+
     if (existingItemIndex >= 0) {
       // If item exists, increase quantity
       const updatedItems = [...cartItems];
       updatedItems[existingItemIndex].quantity += 1;
-      updatedItems[existingItemIndex].totalPrice = 
+      updatedItems[existingItemIndex].totalPrice =
         updatedItems[existingItemIndex].quantity * parseFloat(updatedItems[existingItemIndex].price.replace('₹', ''));
       setCartItems(updatedItems);
     } else {
@@ -82,7 +94,7 @@ const CartProvider = ({ children }) => {
       }
       return item;
     });
-    
+
     setCartItems(updatedItems);
   };
 
@@ -104,15 +116,18 @@ const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ 
-      cartItems, 
-      addToCart, 
+    <CartContext.Provider value={{
+      cartItems,
+      addToCart,
       removeFromCart,
       updateQuantity,
       toggleItemSelection,
       getCartTotal,
       getCartItemCount,
-      clearCart
+      clearCart,
+      url,
+      token,
+      setToken
     }}>
       {children}
     </CartContext.Provider>

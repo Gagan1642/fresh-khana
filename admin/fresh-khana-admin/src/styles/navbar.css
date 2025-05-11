@@ -1,0 +1,155 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.4s ease;
+    background-color: white;
+}
+
+.header-container.hide {
+    transform: translateY(-100%);
+}
+
+.header-container.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    /* Adjust padding as needed */
+    background-color: white;
+    position: relative;
+}
+
+.scrolled .navbar {
+    padding: 15px 10%;
+    /* Adjust padding when scrolled */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 40px;
+    /* Adjust as needed */
+}
+
+.logo-text {
+    font-family: "Abril Fatface", serif;
+    /* Keep your font */
+    font-size: 24px;
+    /* Adjust as needed */
+    font-weight: bold;
+    font-size: 30px;
+    color: #333;
+}
+
+.logo-text span {
+    color: #2BB7A0;
+    /* Keep your brand color */
+    font-family: "Leckerli One", cursive;
+    /* Keep your font */
+    font-weight: normal;
+    font-size: xx-large;
+    /* Adjust as needed */
+}
+
+.navbar-middle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.search-container {
+    width: 100%;
+    position: relative;
+    margin: 0 20px;
+}
+
+.search-input {
+    width: 100%;
+    height: 36px;
+    border-radius: 18px;
+    border: 1px solid #e0e0e0;
+    padding: 0 40px 0 40px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.search-input:focus {
+    border-color: #00b8c5;
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff5722;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item {
+    margin-left: 20px;
+    position: relative;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.admin-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    margin-right: 8px;
+}
+
+.admin-avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.admin-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.admin-name:hover {
+    color: #00b8c5;
+}
+
+/* Media queries for responsive navbar */
+@media (max-width: 768px) {
+    .navbar-middle {
+        display: none;
+    }
+
+    .admin-name {
+        display: none;
+    }
+}

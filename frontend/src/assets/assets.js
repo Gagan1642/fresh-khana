@@ -16,6 +16,7 @@ import section3 from './drinks.jpg';
 import section4 from './sweets.jpg';
 import section5 from './cakes.jpg';
 import footer_bg from './footer-bg.jpg';
+import logedIn_User from './logedIn_User.png';
 
 // Fast-Food
 import burger from './menu/fast-food/fast-food-burger.jpg';
@@ -87,7 +88,8 @@ export const assets = {
     section3,
     section4,
     section5,
-    footer_bg
+    footer_bg,
+    logedIn_User
 };
 
 export const fast_food = {

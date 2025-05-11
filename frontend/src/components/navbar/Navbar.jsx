@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
+import { CartContext } from '../../context/CartContext';
+import { assets } from '../../assets/assets';
 import '../../styles/navbar.css';
 
 const Navbar = ({ setShowLogin, setIsLogin }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isPagesOpen, setIsPagesOpen] = useState(false);
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
     const { getCartItemCount } = useCart();
+    const { token, setToken } = useContext(CartContext); // Ensure CartContext is imported correctly
 
-    // Get cart count using the function from context
+    // Get cart count from context
     const cartCount = getCartItemCount();
+
+    const handleLogout = () => {
+        setToken(null);
+        localStorage.removeItem("token");
+        setIsLogin(false);
+    };
 
     return (
         <header className="header-container">
@@ -66,15 +76,34 @@ const Navbar = ({ setShowLogin, setIsLogin }) => {
                             CART <span className="cart-count">{cartCount}</span>
                         </button>
                     </Link>
-                    <button
-                        onClick={() => {
-                            setIsLogin(true);
-                            setShowLogin(true);
-                        }}
-                        className="cta-button"
-                    >
-                        Sign In
-                    </button>
+                    {token ? (
+                        <div
+                            className="profile-dropdown"
+                            onMouseEnter={() => setIsProfileOpen(true)}
+                            onMouseLeave={() => setIsProfileOpen(false)}
+                        >
+                            <img
+                                src={assets.logedIn_User}
+                                alt="User"
+                                className="user-icon"
+                            />
+                            {isProfileOpen && (
+                                <div className="profile-content">
+                                    <button onClick={handleLogout}>Logout</button>
+                                </div>
+                            )}
+                        </div>
+                    ) : (
+                        <button
+                            onClick={() => {
+                                setIsLogin(true);
+                                setShowLogin(true);
+                            }}
+                            className="cta-button"
+                        >
+                            Sign In
+                        </button>
+                    )}
                 </div>
 
                 <div className="wave-navbar"></div>

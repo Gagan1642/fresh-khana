@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../../assets/assets";
+import { SquareMenu, CookingPot, Microwave, CalendarSync } from "lucide-react";
 
 const Steps = () => {
     return (
@@ -25,25 +26,25 @@ const Steps = () => {
                 <ul className="features-list">
                     <li className="feature-item">
                         <div className="feature-icon choose-icon">
-                            <img src={assets.menu} alt="" />
+                        <SquareMenu size={20}/>
                         </div>
                         <span className="feature-text">Choose your meals</span>
                     </li>
                     <li className="feature-item">
                         <div className="feature-icon cook-icon">
-                            <img src={assets.fry_pan} alt="" />
+                        <CookingPot size={20}/>
                         </div>
                         <span className="feature-text">We cook & deliver</span>
                     </li>
                     <li className="feature-item">
                         <div className="feature-icon heat-icon">
-                            <img src={assets.oven} alt="" />
+                        <Microwave size={20}/>
                         </div>
                         <span className="feature-text">Heat & eat</span>
                     </li>
                     <li className="feature-item">
                         <div className="feature-icon repeat-icon">
-                            <img src={assets.repeat} alt="" />
+                        <CalendarSync size={20}/>
                         </div>
                         <span className="feature-text">Enjoy & Repeat</span>
                     </li>

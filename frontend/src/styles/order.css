@@ -158,12 +158,12 @@
     .order-content {
         flex-direction: column;
     }
-    
+
     .delivery-info-form,
     .order-summary {
         max-width: 100%;
     }
-    
+
     .form-row {
         flex-direction: column;
         gap: 0;
